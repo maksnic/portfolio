@@ -1,0 +1,491 @@
+`html
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Максим | Інженер-конструктор</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+body {
+background: #10151d;
+color: #e8edf5;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+}
+
+:root {
+--blue: #2997ff;
+--dark: #10151d;
+--card: #19222e;
+--gray: #9ba8b8;
+}
+
+header {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(16,21,29,0.95);
+border-bottom: 1px solid #283442;
+z-index: 100;
+}
+
+nav {
+max-width: 1150px;
+margin: auto;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 22px;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+.logo span {
+color: var(--blue);
+}
+
+nav a {
+color: #dce4ee;
+text-decoration: none;
+margin-left: 24px;
+font-size: 14px;
+}
+
+nav a:hover {
+color: var(--blue);
+}
+
+section {
+max-width: 1150px;
+margin: auto;
+padding: 100px 25px;
+}
+
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+position: relative;
+background-image:
+linear-gradient(rgba(41,151,255,.035) 1px, transparent 1px),
+linear-gradient(90deg, rgba(41,151,255,.035) 1px, transparent 1px);
+background-size: 40px 40px;
+}
+
+.hero-content {
+max-width: 750px;
+}
+
+.tag {
+color: var(--blue);
+letter-spacing: 3px;
+font-size: 13px;
+margin-bottom: 25px;
+}
+
+h1 {
+font-size: clamp(42px, 7vw, 76px);
+line-height: 1.1;
+margin-bottom: 25px;
+}
+
+h1 span {
+color: var(--blue);
+}
+
+.hero p {
+color: var(--gray);
+font-size: 18px;
+max-width: 600px;
+margin-bottom: 35px;
+}
+
+.button {
+display: inline-block;
+background: var(--blue);
+color: white;
+padding: 14px 28px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 4px;
+transition: .3s;
+}
+
+.button:hover {
+background: #0877df;
+transform: translateY(-3px);
+}
+
+h2 {
+font-size: 34px;
+margin-bottom: 15px;
+}
+
+h2 span {
+color: var(--blue);
+}
+
+.subtitle {
+color: var(--gray);
+margin-bottom: 40px;
+}
+
+.about {
+background: #141c26;
+max-width: 100%;
+}
+
+.about-content {
+max-width: 1100px;
+margin: auto;
+}
+
+.about p {
+color: var(--gray);
+max-width: 800px;
+font-size: 17px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 20px;
+}
+
+.card {
+background: var(--card);
+border: 1px solid #2b3949;
+padding: 28px;
+border-radius: 6px;
+transition: .3s;
+}
+
+.card:hover {
+border-color: var(--blue);
+transform: translateY(-5px);
+}
+
+.card h3 {
+margin-bottom: 12px;
+color: #fff;
+}
+
+.card p {
+color: var(--gray);
+font-size: 14px;
+}
+
+.icon {
+font-size: 30px;
+margin-bottom: 15px;
+}
+
+.software {
+background: #141c26;
+max-width: 100%;
+}
+
+.software-content {
+max-width: 1100px;
+margin: auto;
+}
+
+.skill {
+text-align: center;
+font-size: 19px;
+font-weight: bold;
+color: #dce8f7;
+}
+
+.skill span {
+display: block;
+color: var(--blue);
+font-size: 12px;
+margin-top: 8px;
+font-weight: normal;
+}
+
+.project {
+min-height: 180px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.project-number {
+color: var(--blue);
+font-size: 32px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.contact {
+text-align: center;
+background: #141c26;
+max-width: 100%;
+}
+
+.contact-content {
+max-width: 800px;
+margin: auto;
+}
+footer {
+text-align: center;
+padding: 25px;
+color: #718096;
+border-top: 1px solid #283442;
+font-size: 13px;
+}
+
+@media(max-width: 700px) {
+nav {
+flex-direction: column;
+gap: 12px;
+}
+
+nav a {
+margin: 0 7px;
+font-size: 12px;
+}
+
+section {
+padding: 80px 20px;
+}
+
+h2 {
+font-size: 28px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">MAKSYM<span>.</span></div>
+<div>
+<a href="#about">Про мене</a>
+<a href="#skills">Навички</a>
+<a href="#software">Програми</a>
+<a href="#projects">Проєкти</a>
+<a href="#contact">Контакти</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
+<div class="tag">ENGINEERING PORTFOLIO / 2026</div>
+
+<h1>
+МАКСИМ<br>
+<span>ІНЖЕНЕР-КОНСТРУКТОР</span>
+</h1>
+
+<p>
+Проєктування механізмів та промислового обладнання.
+3D-моделювання, розробка конструкцій
+та підготовка технічної документації.
+</p>
+
+<a href="#projects" class="button">
+ПЕРЕГЛЯНУТИ ПРОЄКТИ →
+</a>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="about-content">
+
+<div class="tag">01 / ПРОФІЛЬ</div>
+
+<h2>Про <span>мене</span></h2>
+
+<p>
+Вітаю! Мене звати Максим.
+Я займаюся інженерним конструюванням,
+проєктуванням механізмів та обладнання.
+
+Мій професійний напрямок — розробка
+технічних рішень, тривимірне моделювання
+деталей і вузлів, створення конструкторської
+документації.
+
+Ціную точність, функціональність,
+технологічність та продуманість кожної конструкції.
+</p>
+
+</div>
+</section>
+
+<section id="skills">
+
+<div class="tag">02 / КОМПЕТЕНЦІЇ</div>
+<h2>Професійні <span>навички</span></h2>
+<p class="subtitle">
+Основні напрямки інженерної діяльності
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">⚙</div>
+<h3>3D-моделювання</h3>
+<p>
+Створення тривимірних моделей
+деталей, вузлів та механізмів.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📐</div>
+<h3>Креслення</h3>
+<p>
+Розробка технічних та складальних
+креслень.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔩</div>
+<h3>Конструювання</h3>
+<p>
+Проєктування механізмів,
+конструкцій та обладнання.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📋</div>
+<h3>Документація</h3>
+<p>
+Підготовка технічної та
+конструкторської документації.
+</p>
+</div>
+
+</div>
+</section>
+
+<section class="software" id="software">
+<div class="software-content">
+<div class="tag">03 / TECHNOLOGY</div>
+<h2>Програмне <span>забезпечення</span></h2>
+<p class="subtitle">
+Інструменти для інженерного проєктування
+</p>
+
+<div class="grid">
+
+<div class="card skill">
+SOLIDWORKS
+<span>3D CAD</span>
+</div>
+
+<div class="card skill">
+SOLID EDGE
+<span>3D CAD</span>
+</div>
+
+<div class="card skill">
+КОМПАС-3D
+<span>CAD SYSTEM</span>
+</div>
+
+<div class="card skill">
+MICROSOFT EXCEL
+<span>Таблиці та розрахунки</span>
+</div>
+
+<div class="card skill">
+MICROSOFT WORD
+<span>Документація</span>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="projects">
+
+<div class="tag">04 / PORTFOLIO</div>
+<h2>Мої <span>проєкти</span></h2>
+<p class="subtitle">
+Приклади інженерних розробок та конструкторських робіт.
+Галерею можна буде доповнити власними матеріалами.
+</p>
+
+<div class="grid">
+
+<div class="card project">
+<div class="project-number">01</div>
+<h3>Механізми та вузли</h3>
+<p>Місце для опису власних розробок.</p>
+</div>
+
+<div class="card project">
+<div class="project-number">02</div>
+<h3>3D-моделювання</h3>
+<p>Місце для прикладів тривимірних моделей.</p>
+</div>
+
+<div class="card project">
+<div class="project-number">03</div>
+<h3>Технічні креслення</h3>
+<p>Місце для конструкторської документації.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="contact-content">
+
+<div class="tag">05 / CONTACT</div>
+
+<h2>Давайте <span>співпрацювати</span></h2>
+
+<p class="subtitle">
+Відкритий до професійного спілкування,
+цікавих інженерних завдань та нових можливостей.
+</p>
+
+<p style="color:#9ba8b8">
+Максим | Інженер-конструктор
+</p>
+
+<p style="color:#2997ff; margin-top:15px">
+Контактні дані будуть додані пізніше
+</p>
+
+</div>
+</section>
+
+<footer>
+© <span id="year"></span> MAKSYM ENGINEERING.
+Усі права захищені.
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+</script>
+
+</body>
+</html>
+`
